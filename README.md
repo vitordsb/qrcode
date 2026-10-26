@@ -9,11 +9,8 @@ Por **Vitor** ([@vitordsb](https://github.com/vitordsb)).
 - Abra o `index.html` no navegador
 - Escreva seu texto (URL, e-mail, telefone)
 - Clique em "Gerar QRcode"
-- Para salvar, clique com o botão direito na imagem e escolha "Salvar imagem como"
+- Para salvar, clique em "Baixar"
 - Para apagar, clique em "Resetar"
-
-### Próximas atualizações
-- Botão para baixar a imagem gerada
 
 ## Instalação local
 

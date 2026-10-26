@@ -1,5 +1,5 @@
-$fuschia: #ff0081;
-$button-bg: $fuschia;
+$azul: #1a73e8;
+$button-bg: $azul;
 $button-text-color: #fff;
 body,
 html {
@@ -28,7 +28,7 @@ html {
     cursor: pointer;
     position: relative;
     transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
-    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+    box-shadow: 0 2px 25px rgba(26, 115, 232, 0.5);
     &:focus {
         outline: 0;
     }
@@ -58,10 +58,14 @@ html {
         background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
         //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
     }
-    &:active {
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+    &:active:not(:disabled) {
         transform: scale(0.9);
         background-color: darken($button-bg, 5%);
-        box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+        box-shadow: 0 2px 25px rgba(26, 115, 232, 0.2);
     }
     &.animate {
         &:before {
@@ -78,7 +82,7 @@ html {
 //input styles
 textarea {
     outline: none;
-    border: dotted 2px #ff0081;
+    border: dotted 2px #1a73e8;
     background-color: rgb(110, 114, 122);
     margin-top: 20px;
     width: 340px;
@@ -99,7 +103,7 @@ textarea {
 }
 
 img {
-    border: solid 2px #ff00807f;
+    border: solid 2px #1a73e87f;
     width: 345px;
     height: 345px;
     margin-top: 100px;
@@ -108,5 +112,5 @@ img {
 }
 
 .menor {
-    background-color: rgba(255, 0, 132, 0.905);
+    background-color: rgba(26, 115, 232, 0.905);
 }

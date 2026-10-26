@@ -1,6 +1,7 @@
 //qr code
 let codigoqr = captura('img');
 let texto = captura('textarea');
+let botaoBaixar = captura('#baixar');
 
 function generate() {
     let tamanho = "930x930";
@@ -10,6 +11,20 @@ function generate() {
     let url = `${baseURL}?data=${textoqr}&size=${tamanho}`;
 
     codigoqr.src = url;
+    botaoBaixar.disabled = false;
+};
+
+function baixar() {
+    fetch(codigoqr.src)
+        .then(resposta => resposta.blob())
+        .then(imagem => {
+            let link = document.createElement('a');
+            link.href = URL.createObjectURL(imagem);
+            link.download = 'qrcode.png';
+            link.click();
+            setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+        })
+        .catch(() => window.open(codigoqr.src, '_blank'));
 };
 
 function captura(el) {
